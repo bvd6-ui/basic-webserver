@@ -19,14 +19,27 @@ app.use((req, res) => {
 });
 
 // Listen on this computer at port 3000.
-const port = 3000;
-app.listen(port, (error) => {
-  // If the port is already in use, show the error instead of a success message.
-  if (error) {
-    console.error(error.message);
-    process.exitCode = 1;
-    return;
-  }
+// Start listening only when we run this file directly with Node.
+// When the tests import this file, they start their own test server.
+if (require.main === module) {
+  // A port identifies which program should receive a connection.
+  // localhost means this computer. Keep this program running
+  // while visiting http://localhost:3000 in your browser.
+  const port = 3000;
+  app.listen(port, (error) => {
+    // If the port is already in use, show the error instead of a success message.
+    if (error) {
+      console.error(error.message);
+      process.exitCode = 1;
+      return;
+    }
+    console.log(`Server running at http://localhost:${port}`);
+    console.log('Press Ctrl+C in this terminal to stop the server.');
+  });
+}
+
+// Exporting lets the test file use the same app.
+module.exports = app;
   console.log(`Server running at http://localhost:${port}`);
   console.log('Press Ctrl+C in this terminal to stop the server.');
 });
