@@ -12,10 +12,6 @@ app.get('/about', (req, res) => {
   res.send('A web server receives a request and sends a response.');
 });
 
-app.get('/hello',(req,res) => {
-    res.send('hello world!');
-});
-
 // Keep the missing-page response after all of our routes.
 app.use((req, res) => {
   res.status(404);
