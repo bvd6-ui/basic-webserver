@@ -14,3 +14,9 @@ part 2:
 Explain this chain in one sentence: npm start → package.json → node index.js → printed message. Then restore the original greeting for Part 3.
 
 npm start is what runs the start script, package.json is where project information is stored, node index.js is the command to run the main part of the program, the printed message is from the print statement in index.js
+
+part 4:
+
+You have completed this part when all three original paths behave as predicted and you can explain why the missing-page function must come last.
+
+the missing page function must come last because express resolves routes from top to bottom. if it came first, all pages would go to it.
