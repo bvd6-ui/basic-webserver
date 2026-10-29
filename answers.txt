@@ -20,3 +20,9 @@ part 4:
 You have completed this part when all three original paths behave as predicted and you can explain why the missing-page function must come last.
 
 the missing page function must come last because express resolves routes from top to bottom. if it came first, all pages would go to it.
+
+part 5:
+
+Explain which command starts your browser server, which runs your test, and why the test waits before checking the response.
+
+npm start is the command that starts the web server, npm test runs the automated tests. The test waits before checking because otherwise it would be too fast, and see the lack of response as a fail rather than just buffering
