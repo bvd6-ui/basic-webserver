@@ -40,6 +40,3 @@ if (require.main === module) {
 
 // Exporting lets the test file use the same app.
 module.exports = app;
-  console.log(`Server running at http://localhost:${port}`);
-  console.log('Press Ctrl+C in this terminal to stop the server.');
-});
