@@ -4,7 +4,18 @@ const app = express();
 
 // Answer a GET request for the home page.
 app.get('/', (req, res) => {
-  res.send('Hello, Brennan! Your web server is working.');
+  res.send('Hello, IS117! Your web server is working.');
+});
+
+// A second path gets a different response.
+app.get('/about', (req, res) => {
+  res.send('A web server receives a request and sends a response.');
+});
+
+// Keep the missing-page response after all of our routes.
+app.use((req, res) => {
+  res.status(404);
+  res.send('Page not found.');
 });
 
 // Listen on this computer at port 3000.
