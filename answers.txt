@@ -1,0 +1,16 @@
+These are the answers to any questions for the project
+
+part 1:
+
+You can run it and explain the comment, string, working directory, and returned prompt.
+
+The comment is a line of text in the code that does nothing, and is just to aid future people maintaining the code. 
+The string is what represents text inside a computer
+the working directory is the current location on the computer console commands will launch from
+
+
+part 2:
+
+Explain this chain in one sentence: npm start → package.json → node index.js → printed message. Then restore the original greeting for Part 3.
+
+npm start is what runs the start script, package.json is where project information is stored, node index.js is the command to run the main part of the program, the printed message is from the print statement in index.js
