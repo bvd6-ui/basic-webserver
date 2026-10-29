@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/bvd6-ui/basic-webserver/issues"
   },
-  "homepage": "https://github.com/bvd6-ui/basic-webserver#readme"
+  "homepage": "https://github.com/bvd6-ui/basic-webserver#readme",
+  "dependencies": {
+    "express": "^5.3.0"
+  }
 }
